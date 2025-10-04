@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientes-deployment
+  labels:
+    app: clientes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: clientes
+  template:
+    metadata:
+      labels:
+        app: clientes
+    spec:
+      containers:
+      - name: clientes
+        image: seuusuario/clientes-api:1.0   # ajuste para o nome da imagem no Docker Hub
+        ports:
+        - containerPort: 8082
