@@ -9,6 +9,8 @@ spec:
     app: clientes
   ports:
     - name: http
-      port: 8082        # porta do serviço no cluster
-      targetPort: 8082  # porta exposta pelo container
-  type: NodePort        # expõe externamente (para acessar pelo Play with Kubernetes)
+      port: 8082
+      targetPort: 8082
+      # NodePort deve ser um valor entre 30000-32767 (opcional deixar o Kubernetes escolher)
+      nodePort: 32082
+  type: NodePort

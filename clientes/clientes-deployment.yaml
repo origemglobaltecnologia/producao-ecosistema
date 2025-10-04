@@ -18,4 +18,4 @@ spec:
       - name: clientes
         image: clientes-api:1.0
         ports:
-        - containerPort: 8082   # porta corrigida
+        - containerPort: 8082
