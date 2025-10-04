@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: clientes
-        image: seuusuario/clientes-api:1.0   # ajuste para o nome da imagem no Docker Hub
+        image: clientes-api:1.0
         ports:
-        - containerPort: 8082
+        - containerPort: 8082   # porta corrigida
